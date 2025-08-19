@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1> To Do List</h1>
+    <h2>Monday</h2>
+    <div class="box">
+        <p class="done"> Do these things today</p>
+        <ul class="list">
+            <li>Imp</li>
+            <li class="done">Read </li>
+            <li class="done">Math </li>
+        </ul>
+    </div>
+    <ul>
+        <p class="done">Other Items</p>
+    </ul>
+    <p>The best preparation for tomorrow</p>
+</body>
+</html>
