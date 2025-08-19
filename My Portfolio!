@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhi Shingare - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <nav>
+        <a href="index.html">
+            <img src="C:\Users\shing\OneDrive\Pictures\20250401_161013.png" 
+            alt=""github class="nav-logo">
+        </a>
+    </nav>   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Siddhi Shingare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <li id="first-id" class="firstclass" draggable></li>
+
+        </div>
+    </nav>
+     
+    <header class="jumbotron text-center">
+        <h1>Welcome to My Portfolio</h1>
+        <p>A Passionate Programmer Exploring Technology</p>
+    </header>
+    <style>
+    body {
+        background-color: black;
+        color: white;
+    }
+    .li{color:#ff69b4 !important;}
+    .firstclass{color:red;}
+    li[draggable] {color:plum;}
+    #first-id{color:#ff4b2b;}
+    .jumbotron {
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        color: white;
+        padding: 60px;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+    .jumbotron h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    .about-container {
+        background: rgba(15, 9, 9, 0.842);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(19, 18, 18, 0.829);
+    }
+    .skill-box {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        padding: 15px;
+        border-radius: 10px;
+        margin: 10px 0;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(24, 22, 22, 0.884);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill-box:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(17, 14, 14, 0.3);
+    }
+    .contact-section {
+        background-color: black;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    }
+    .contact-section .btn {
+        background-color: pink;
+        color: black;
+        font-weight: bold;
+    }
+    .contact-section .btn:hover {
+        background-color: #ff69b4;
+    }
+    .nav-logo {
+            height: 40px; /* Adjust size as needed */
+            width: auto;
+    }
+</style>
+    <section id="about" class="container text-center py-5">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="C:\Users\shing\OneDrive\Pictures\20250401_161013.png" class="rounded-circle my-3" alt="Siddhi" width="150">
+            <p class="lead">Hi, I'm Siddhi! A dedicated programmer with curiosity and creativity, always pushing boundaries.
+                I love exploring new technologies and crafting innovative solutions. Let’s build something amazing together!
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="container py-5">
+        <h2 class="text-center">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-4"> <div class="skill-box">Java</div> </div>
+            <div class="col-md-4"> <div class="skill-box">C++ </div> </div>
+            <div class="col-md-4"> <div class="skill-box">HTML</div> </div>
+            <div class="col-md-4"> <div class="skill-box">CSS </div> </div>
+            <div class="col-md-4"> <div class="skill-box">C </div> </div>
+            <div class="col-md-4"> <div class="skill-box">Blockchain </div> </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container text-center py-5 contact-section">
+        <h2>Contact</h2>
+        <form class="mt-3" action="https://script.google.com/macros/s/AKfycbxWeHcUXcE7zoREGrDfFeSbmdfM_ds_qD4iJD6C/exec" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required class="form-control mb-2">
+            <input type="email" name="input-email" placeholder="Your Email" required class="form-control mb-2">
+            <textarea name="input-message" placeholder="Message" rows="4" required class="form-control mb-2"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <p>Email: shingaresiddhi85@gmail.com</p>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">&copy; 2025 Siddhi Shingare. All Rights Reserved.</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
