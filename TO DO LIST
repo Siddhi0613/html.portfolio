@@ -1,19 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic To-Do List</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #c3ecf7, #f5d0f5);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-size: 26px;
+      color: #6a0dad;
+    }
+
+    h2 {
+      margin: 5px 0 20px;
+      font-size: 18px;
+      color: #444;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f7f7f7;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background: #e6d7ff;
+      transform: scale(1.02);
+    }
+
+    li.done {
+      text-decoration: line-through;
+      color: #888;
+      background: #d0f0c0;
+    }
+
+    .quote {
+      margin-top: 20px;
+      font-size: 14px;
+      font-style: italic;
+      color: #666;
+    }
+
+    .progress {
+      height: 10px;
+      width: 100%;
+      background: #eee;
+      border-radius: 5px;
+      margin-top: 15px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(to right, #6a0dad, #ff6ec4);
+      width: 0;
+      transition: 0.4s;
+    }
+  </style>
+</head>
 <body>
-    <h1> To Do List</h1>
+  <div class="container">
+    <h1>✨ To Do List ✨</h1>
     <h2>Monday</h2>
-    <div class="box">
-        <p class="done"> Do these things today</p>
-        <ul class="list">
-            <li>Imp</li>
-            <li class="done">Read </li>
-            <li class="done">Math </li>
-        </ul>
-    </div>
-    <ul>
-        <p class="done">Other Items</p>
+    <ul id="todo-list">
+      <li>📌 Imp</li>
+      <li>📖 Read</li>
+      <li>🔢 Math</li>
     </ul>
-    <p>The best preparation for tomorrow</p>
+    <div class="progress">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p class="quote" id="quote">"The best preparation for tomorrow is doing your best today."</p>
+  </div>
+
+  <script>
+    const listItems = document.querySelectorAll("#todo-list li");
+    const progressBar = document.getElementById("progress-bar");
+    const quoteBox = document.getElementById("quote");
+
+    const quotes = [
+      "Push yourself, because no one else is going to do it for you.",
+      "Small steps every day add up to big results.",
+      "Stay positive, work hard, make it happen.",
+      "Don’t watch the clock; do what it does. Keep going.",
+      "The secret of getting ahead is getting started."
+    ];
+
+    // Random motivational quote
+    quoteBox.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+
+    // Task toggle + progress
+    listItems.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("done");
+        updateProgress();
+      });
+    });
+
+    function updateProgress() {
+      const total = listItems.length;
+      const done = document.querySelectorAll("#todo-list li.done").length;
+      progressBar.style.width = `${(done / total) * 100}%`;
+    }
+  </script>
 </body>
 </html>
